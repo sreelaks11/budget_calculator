@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | BudgetFlow</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white">
+
+    <!-- Navbar -->
+
+    <nav class="border-b border-slate-800 bg-slate-900">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4">
+
+                <!-- Logo -->
+
+                <div class="flex items-center gap-3">
+
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-slate-950 flex items-center justify-center font-bold text-xl">
+                        ₹
+                    </div>
+
+                    <h1 class="text-xl sm:text-2xl font-bold">
+                        BudgetFlow
+                    </h1>
+
+                </div>
+
+
+                <!-- Navigation -->
+
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+
+                    <a href="dashboard.html"
+                        class="px-4 py-2 rounded-lg bg-emerald-500 text-slate-950 text-sm font-semibold">
+                        Dashboard
+                    </a>
+
+                    <a href="add.html"
+                        class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-semibold transition">
+                        Add Transaction
+                    </a>
+
+                    <a href="history.html"
+                        class="px-4 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-sm font-semibold transition">
+                        History
+                    </a>
+
+                    <button onclick="logout()"
+                        class="px-4 py-2 rounded-lg border border-red-500/40 text-red-400 hover:bg-red-500/10 text-sm font-semibold transition">
+                        Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main -->
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+
+        <!-- Welcome -->
+
+        <div class="mb-8">
+
+            <p class="text-emerald-400 text-sm uppercase tracking-widest font-semibold mb-2">
+                Overview
+            </p>
+
+            <h2 class="text-3xl sm:text-4xl font-bold">
+                Welcome, <span id="username">User</span> 👋
+            </h2>
+
+            <p class="text-slate-400 mt-2">
+                Here's your financial summary.
+            </p>
+
+        </div>
+
+
+        <!-- Cards -->
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+
+            <!-- Income -->
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <p class="text-slate-400 text-sm">
+                            Total Income
+                        </p>
+
+                        <h3 id="totalIncome"
+                            class="text-3xl font-bold text-emerald-400 mt-2">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                        ↑
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Expense -->
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <p class="text-slate-400 text-sm">
+                            Total Expenses
+                        </p>
+
+                        <h3 id="totalExpense"
+                            class="text-3xl font-bold text-red-400 mt-2">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                    <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-xl">
+                        ↓
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Balance -->
+
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:col-span-2 lg:col-span-1">
+
+                <div class="flex items-center justify-between">
+
+                    <div>
+
+                        <p class="text-slate-400 text-sm">
+                            Remaining Balance
+                        </p>
+
+                        <h3 id="balance"
+                            class="text-3xl font-bold text-white mt-2">
+                            ₹0
+                        </h3>
+
+                    </div>
+
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl">
+                        ₹
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Quick Actions -->
+
+        <div class="mt-8 bg-slate-900 border border-slate-800 rounded-2xl p-6">
+
+            <h3 class="text-xl font-bold mb-2">
+                Quick Actions
+            </h3>
+
+            <p class="text-slate-400 text-sm mb-6">
+                Manage your income and expenses easily.
+            </p>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                <a href="add.html"
+                    class="p-5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 transition">
+
+                    <h4 class="font-bold text-lg">
+                        + Add Transaction
+                    </h4>
+
+                    <p class="text-sm mt-1 opacity-80">
+                        Add income or expense
+                    </p>
+
+                </a>
+
+
+                <a href="history.html"
+                    class="p-5 rounded-xl bg-slate-800 hover:bg-slate-700 transition">
+
+                    <h4 class="font-bold text-lg">
+                        View Transactions
+                    </h4>
+
+                    <p class="text-slate-400 text-sm mt-1">
+                        View your transaction history
+                    </p>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>

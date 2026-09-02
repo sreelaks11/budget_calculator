@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | BudgetFlow</title>
+    <script src="./script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-slate-950 text-white">
+
+    <!-- PAGE -->
+    <main class="min-h-screen flex items-center justify-center
+                 px-3 py-4
+                 sm:px-5 sm:py-6
+                 md:px-8
+                 lg:px-10
+                 xl:px-12">
+
+        <!-- LOGIN CARD -->
+        <div class="w-full
+                    max-w-sm
+                    sm:max-w-md
+                    md:max-w-lg
+                    lg:max-w-4xl
+                    xl:max-w-5xl
+
+                    bg-slate-900
+
+                    rounded-2xl
+                    sm:rounded-3xl
+
+                    border border-slate-800
+
+                    shadow-2xl
+
+                    overflow-hidden
+
+                    grid grid-cols-1
+                    lg:grid-cols-2">
+
+
+            <!-- ================================================= -->
+            <!-- LEFT SIDE - DESKTOP -->
+            <!-- ================================================= -->
+
+            <section class="hidden lg:flex
+
+                            bg-gradient-to-br
+                            from-emerald-600
+                            via-teal-600
+                            to-slate-900
+
+                            p-8
+                            xl:p-12
+
+                            flex-col
+                            justify-between
+
+                            relative
+                            overflow-hidden">
+
+
+                <!-- Decorative Circle 1 -->
+
+                <div class="absolute
+                            -top-24
+                            -right-24
+
+                            w-56
+                            h-56
+
+                            xl:w-72
+                            xl:h-72
+
+                            rounded-full
+
+                            bg-white/10">
+                </div>
+
+
+                <!-- Decorative Circle 2 -->
+
+                <div class="absolute
+                            -bottom-32
+                            -left-24
+
+                            w-64
+                            h-64
+                            xl:w-80
+                            xl:h-80
+
+                            rounded-full
+
+                            bg-emerald-300/10">
+                </div>
+
+
+                <!-- LOGO -->
+
+                <div class="relative z-10
+                            flex items-center gap-3">
+
+                    <div class="w-10
+                                h-10
+
+                                xl:w-11
+                                xl:h-11
+
+                                rounded-xl
+
+                                bg-white/20
+
+                                flex
+                                items-center
+                                justify-center
+
+                                text-xl
+                                xl:text-2xl
+
+                                font-bold">
+
+                        ₹
+
+                    </div>
+
+                    <h1 class="text-xl
+                               xl:text-2xl
+                               font-bold">
+
+                        BudgetFlow
+
+                    </h1>
+
+                </div>
+
+
+                <!-- CENTER CONTENT -->
+
+                <div class="relative z-10
+                            my-8
+                            xl:my-12">
+
+                    <p class="text-emerald-100
+                              text-xs
+                              uppercase
+                              tracking-[0.25em]
+                              mb-3">
+
+                        Welcome Back
+
+                    </p>
+
+
+                    <h2 class="text-3xl
+                               xl:text-5xl
+
+                               font-bold
+
+                               leading-tight
+
+                               mb-5">
+
+                        Manage your money.
+                        <br>
+
+                        <span class="text-emerald-100">
+
+                            Live smarter.
+
+                        </span>
+
+                    </h2>
+
+
+                    <p class="text-sm
+                              xl:text-base
+
+                              text-white/70
+
+                              leading-relaxed
+
+                              max-w-md">
+
+                        Track your income, control your
+                        expenses and understand your
+                        financial habits from one simple
+                        dashboard.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FOOTER -->
+
+                <p class="relative z-10
+                          text-xs
+                          xl:text-sm
+
+                          text-white/50">
+
+                    © 2026 BudgetFlow
+
+                </p>
+
+            </section>
+
+
+
+            <!-- ================================================= -->
+            <!-- RIGHT SIDE - LOGIN -->
+            <!-- ================================================= -->
+
+            <section class="flex items-center
+
+                            px-5
+                            py-7
+
+                            sm:px-8
+                            sm:py-8
+
+                            md:px-10
+
+                            lg:px-8
+                            lg:py-8
+
+                            xl:px-12
+                            xl:py-10">
+
+
+                <div class="w-full
+                            max-w-md
+                            mx-auto">
+
+
+                    <!-- ========================================= -->
+                    <!-- MOBILE LOGO -->
+                    <!-- ========================================= -->
+
+                    <div class="flex lg:hidden
+                                items-center
+                                justify-center
+
+                                gap-2
+
+                                mb-5
+                                sm:mb-7">
+
+
+                        <div class="w-9
+                                    h-9
+
+                                    sm:w-10
+                                    sm:h-10
+
+                                    rounded-lg
+
+                                    bg-emerald-500
+
+                                    text-slate-950
+
+                                    flex
+                                    items-center
+                                    justify-center
+
+                                    font-bold">
+
+                            ₹
+
+                        </div>
+
+
+                        <h1 class="text-xl
+                                   sm:text-2xl
+                                   font-bold">
+
+                            BudgetFlow
+
+                        </h1>
+
+                    </div>
+
+
+
+                    <!-- ========================================= -->
+                    <!-- HEADING -->
+                    <!-- ========================================= -->
+
+                    <div class="text-center
+                                mb-5
+                                sm:mb-7">
+
+
+                        <p class="text-emerald-400
+
+                                  text-[10px]
+                                  sm:text-xs
+
+                                  uppercase
+
+                                  tracking-[0.2em]
+
+                                  font-semibold
+
+                                  mb-1.5">
+
+                            Welcome Back
+
+                        </p>
+
+
+                        <h2 class="text-2xl
+                                   sm:text-3xl
+                                   md:text-4xl
+
+                                   font-bold
+
+                                   leading-tight">
+
+                            Sign in to your account
+
+                        </h2>
+
+
+                        <p class="text-slate-400
+
+                                  text-xs
+                                  sm:text-sm
+
+                                  mt-2">
+
+                            Continue managing your finances.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ========================================= -->
+                    <!-- FORM -->
+                    <!-- ========================================= -->
+
+                    <form class="space-y-4
+                                 sm:space-y-5">
+
+
+                        <!-- EMAIL -->
+
+                        <div>
+
+                            <label
+                                for="email"
+                                class="block
+
+                                       text-xs
+                                       sm:text-sm
+
+                                       font-medium
+
+                                       text-slate-300
+
+                                       mb-1.5">
+
+                                Email Address
+
+                            </label>
+
+
+                            <input
+                                type="email"
+                                id="email"
+
+                                placeholder="you@example.com"
+
+                                class="w-full
+
+                                       px-3
+                                       py-3
+
+                                       sm:px-4
+                                       sm:py-3.5
+
+                                       rounded-xl
+
+                                       bg-slate-800
+
+                                       border
+                                       border-slate-700
+
+                                       text-white
+
+                                       text-sm
+
+                                       placeholder-slate-500
+
+                                       outline-none
+
+                                       transition
+
+                                       focus:border-emerald-500
+
+                                       focus:ring-2
+                                       focus:ring-emerald-500/20">
+
+                        </div>
+
+
+
+                        <!-- PASSWORD -->
+
+                        <div>
+
+                            <label
+                                for="password"
+                                class="block
+
+                                       text-xs
+                                       sm:text-sm
+
+                                       font-medium
+
+                                       text-slate-300
+
+                                       mb-1.5">
+
+                                Password
+
+                            </label>
+
+
+                            <input
+                                type="password"
+                                id="password"
+
+                                placeholder="Enter your password"
+
+                                class="w-full
+
+                                       px-3
+                                       py-3
+
+                                       sm:px-4
+                                       sm:py-3.5
+
+                                       rounded-xl
+
+                                       bg-slate-800
+
+                                       border
+                                       border-slate-700
+
+                                       text-white
+
+                                       text-sm
+
+                                       placeholder-slate-500
+
+                                       outline-none
+
+                                       transition
+
+                                       focus:border-emerald-500
+
+                                       focus:ring-2
+                                       focus:ring-emerald-500/20">
+
+                        </div>
+
+
+
+                        <!-- REMEMBER -->
+
+                        <div class="flex items-center
+                                    gap-2">
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+
+                                class="w-4
+                                       h-4
+
+                                       accent-emerald-500
+
+                                       shrink-0">
+
+
+                            <label
+                                for="remember"
+                                class="text-xs
+                                       sm:text-sm
+
+                                       text-slate-400">
+
+                                Remember me
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- LOGIN BUTTON -->
+
+                     <a href="./add.html">
+                           <button
+                        onclick="logbtnn()"
+                            type="submit"
+
+                            class="w-full
+
+                                   py-3
+                                   sm:py-3.5
+
+                                   rounded-xl
+
+                                   bg-emerald-500
+
+                                   hover:bg-emerald-400
+
+                                   active:bg-emerald-600
+
+                                   text-slate-950
+
+                                   text-sm
+                                   sm:text-base
+
+                                   font-bold
+
+                                   transition
+                                   duration-300
+
+                                   hover:-translate-y-0.5
+
+                                   shadow-lg
+                                   shadow-emerald-500/10">
+
+                            Login
+
+                        </button>
+                     </a>
+
+                    </form>
+
+
+
+                    <!-- ========================================= -->
+                    <!-- REGISTER LINK -->
+                    <!-- ========================================= -->
+
+                    <p class="text-center
+
+                              text-xs
+                              sm:text-sm
+
+                              text-slate-400
+
+                              mt-5
+                              sm:mt-6">
+
+                        Don't have an account?
+
+                        <a
+                            href="register.html"
+
+                            class="text-emerald-400
+
+                                   hover:text-emerald-300
+
+                                   font-semibold
+
+                                   transition">
+
+                            Create Account
+
+                        </a>
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
