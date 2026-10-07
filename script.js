@@ -1,19 +1,51 @@
-function loging(){
-    const logdetails={
-        fullname:Namee.value,
-        mail:email.value,
-        pass:password.value
+function loging() {
+
+    const fullname = document.getElementById("Namee").value.trim();
+    const mail = document.getElementById("email").value.trim();
+    const pass = document.getElementById("password").value.trim();
+
+    const logdetails = {
+        fullname: fullname,
+        mail: mail,
+        pass: pass
+    };
+
+
+    // Check empty fields
+    if (logdetails.fullname === "" ||
+        logdetails.mail === "" ||
+        logdetails.pass === "") {
+
+        alert("Please fill all the fields");
+        return;
     }
 
-    if(logdetails.fullname=="" || logdetails.mail=="" || logdetails.pass==""){
-        alert('fill the field')
+
+    // Check whether email already exists
+    const existingUser = localStorage.getItem(logdetails.mail);
+
+    if (existingUser) {
+
+        alert("An account with this email already exists");
+        return;
     }
-    else{
-        localStorage.setItem(logdetails.mail,JSON.stringify(logdetails))
-        alert('registered successfully')
-        window.location.href="login.html"
-    }
+
+
+    // Save user details
+    localStorage.setItem(
+        logdetails.mail,
+        JSON.stringify(logdetails)
+    );
+
+
+    // Success
+    alert("Registered successfully");
+
+    // Go to login page
+    window.location.href = "login.html";
 }
+
+
 function logbtnn(){
     const logindetails={
         email:email.value,
@@ -27,9 +59,9 @@ function logbtnn(){
         console.log(detai);
         if(detai){
             if(detai.pass==logindetails.psd){
-                alert("login successfully")
                 localStorage.setItem("currentuser",logindetails.email)
-                window.location.href='dashbord.html'
+                alert("login successfully")
+                window.location.href="dashbord.html"
             }
             else{
                 alert("wrong password")
