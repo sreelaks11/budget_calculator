@@ -16,20 +16,88 @@
     <!-- PAGE -->
     <main class="relative min-h-screen flex items-center justify-center px-4 py-5">
 
-        <!-- BACKGROUND EFFECTS -->
-        <div class="absolute top-1/2 left-1/2
-                    -translate-x-1/2 -translate-y-1/2
-                    w-[450px] h-[450px]
-                    bg-emerald-500/10
-                    blur-[120px]
+        <!-- BACKGROUND -->
+        <div class="absolute inset-0
+                    bg-gradient-to-br
+                    from-emerald-950
+                    via-slate-950
+                    to-teal-950">
+        </div>
+
+        <!-- Large Emerald Glow - Top Left -->
+        <div class="absolute
+                    -top-40
+                    -left-40
+                    w-[550px]
+                    h-[550px]
+                    bg-emerald-500/20
+                    rounded-full
+                    blur-[100px]">
+        </div>
+
+        <!-- Large Teal Glow - Bottom Right -->
+        <div class="absolute
+                    -bottom-40
+                    -right-40
+                    w-[550px]
+                    h-[550px]
+                    bg-teal-500/20
+                    rounded-full
+                    blur-[100px]">
+        </div>
+
+        <!-- Emerald Glow - Right Top -->
+        <div class="absolute
+                    top-20
+                    right-10
+                    w-72
+                    h-72
+                    bg-emerald-400/10
+                    rounded-full
+                    blur-[80px]">
+        </div>
+
+        <!-- Teal Glow - Bottom Left -->
+        <div class="absolute
+                    bottom-10
+                    left-10
+                    w-72
+                    h-72
+                    bg-teal-400/10
+                    rounded-full
+                    blur-[80px]">
+        </div>
+
+        <!-- Decorative Circle -->
+        <div class="absolute
+                    top-16
+                    left-1/2
+                    -translate-x-1/2
+                    w-[450px]
+                    h-[450px]
+                    border
+                    border-emerald-500/10
                     rounded-full">
         </div>
 
-        <div class="absolute top-0 right-0
-                    w-64 h-64
-                    bg-teal-500/5
-                    blur-3xl
+        <!-- Decorative Circle -->
+        <div class="absolute
+                    top-24
+                    left-1/2
+                    -translate-x-1/2
+                    w-[350px]
+                    h-[350px]
+                    border
+                    border-teal-400/10
                     rounded-full">
+        </div>
+
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0
+                    opacity-[0.08]
+                    bg-[linear-gradient(rgba(16,185,129,0.5)_1px,transparent_1px),
+                        linear-gradient(90deg,rgba(16,185,129,0.5)_1px,transparent_1px)]
+                    bg-[size:45px_45px]">
         </div>
 
 
@@ -74,7 +142,7 @@
                 </div>
 
 
-                <span class="hidden sm:block
+                <!-- <span class="hidden sm:block
                              text-[10px]
                              uppercase
                              tracking-[0.2em]
@@ -82,7 +150,7 @@
 
                     Secure Login
 
-                </span>
+                </span> -->
 
             </div>
 
@@ -111,14 +179,14 @@
 
                 </h2>
 
-                <p class="text-slate-400
+                <!-- <p class="text-slate-400
                           text-xs
                           sm:text-sm
                           mt-2">
 
                     Continue managing your finances.
 
-                </p>
+                </p> -->
 
             </div>
 
@@ -252,28 +320,28 @@
 
                 <!-- LOGIN ACTION -->
                 <button
-    onclick="logbtnn()"
-    type="button"
-    class="w-full
-           py-3
-           sm:py-3.5
-           rounded-xl
-           bg-emerald-500
-           hover:bg-emerald-400
-           active:bg-emerald-600
-           text-slate-950
-           text-sm
-           sm:text-base
-           font-bold
-           transition
-           duration-300
-           hover:-translate-y-0.5
-           hover:shadow-lg
-           hover:shadow-emerald-500/20">
+                    onclick="logbtnn()"
+                    type="button"
+                    class="w-full
+                           py-3
+                           sm:py-3.5
+                           rounded-xl
+                           bg-emerald-500
+                           hover:bg-emerald-400
+                           active:bg-emerald-600
+                           text-slate-950
+                           text-sm
+                           sm:text-base
+                           font-bold
+                           transition
+                           duration-300
+                           hover:-translate-y-0.5
+                           hover:shadow-lg
+                           hover:shadow-emerald-500/20">
 
-    Login
+                    Login
 
-</button>
+                </button>
 
 
             </form>
@@ -306,7 +374,6 @@
                     Don't have an account?
 
                     <a
-                    
                         href="./index.html"
                         class="ml-1
                                text-emerald-400
